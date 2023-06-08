@@ -2,7 +2,6 @@ package com.example.thuchanhm3.dao;
 
 import com.example.thuchanhm3.dao.connection.MyConnection;
 import com.example.thuchanhm3.model.Department;
-import com.example.thuchanhm3.model.Employee;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

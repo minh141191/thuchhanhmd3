@@ -82,7 +82,7 @@ public class EmployeeServlet extends HttpServlet {
             response.sendRedirect("/404.jsp");
         }
     }
-    private void updatePost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void updatePost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int departmentId = Integer.parseInt(request.getParameter("department"));
         int id = Integer.parseInt(request.getParameter("id"));
         if (employeeService.checkById(id) && employeeService.checkById(departmentId)) {
@@ -92,7 +92,7 @@ public class EmployeeServlet extends HttpServlet {
             response.sendRedirect("/404.jsp");
         }
     }
-    private void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void delete(HttpServletRequest request, HttpServletResponse response) throws IOException {
         employeeService.deleteById(request);
         response.sendRedirect("/employees");
     }
